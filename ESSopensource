@@ -1,0 +1,120 @@
+local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+local win = DiscordLib:Window("Extreme Sprinting Simulator")
+local serv = win:Server("Player Menu", "http://www.roblox.com/asset/?id=6031075938")
+local btns = serv:Channel("Player")
+    btns:Button(
+    "+100000000 Cash",
+    function()
+local v1 = "Cash"
+local v2 = 100000000
+local event = game:GetService("ReplicatedStorage").SwitchStatsValueAdd
+event:FireServer(v1, v2)
+end)
+    btns:Button(
+    "+1000000 speed",
+    function()
+local v1 = "Speed"
+local v2 = 1000000
+local event = game:GetService("ReplicatedStorage").SwitchLeaderstats
+event:FireServer(v1, v2)
+end)
+    btns:Button(
+    "+1000000 Rebirths",
+    function()
+--Rebirths--
+local v1 = "Rebirths"
+local v2 = 1000000
+local event = game:GetService("ReplicatedStorage").SwitchLeaderstats
+event:FireServer(v1, v2)
+
+--Speed--
+local v1 = "Speed"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").SwitchLeaderstatsSub
+event:FireServer(v1, v2)
+end)
+--------------------------------------------------------------------
+local btns = serv:Channel("Purchaseables")
+    btns:Button(
+    "Buy All Drinks For 0",
+    function()
+local v1 = "CokeCola"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "IceTea"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "Pepsi"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "RedBull"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "MntDew"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "Gatorade"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+end)
+----------------------------------------------------------------------------
+    btns:Button(
+    "Buy All Trails For 0",
+    function()
+
+local v1 = "Sparkles"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "Fire"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "Mist"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "GalaxyParticles"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "GreenParticles"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "Gold Particles"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "FloatingHeat"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "GhostlyGas"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "PurpleyGas"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "VolcanicHeat"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+local v1 = "OnTheMove"
+local v2 = 0
+local event = game:GetService("ReplicatedStorage").Purchased
+event:FireServer(v1, v2)
+end)
+---------------------------------------------------------------------
+
+local serv = win:Server("Credits", "http://www.roblox.com/asset/?id=6031075938")
+serv:Channel("UI by dawid#7205")
+serv:Channel("Script by 266")
