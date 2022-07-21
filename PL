@@ -836,6 +836,71 @@ game:GetService("Workspace")["City_buildings"]:Destroy()
 game:GetService("Workspace")["Square trees"]:Destroy()
 game:GetService("Workspace")["City_buildings"]:Destroy()
 end)
+
+local serv = win:Server("TP Menu", "http://www.roblox.com/asset/?id=6031075938")
+local btns = serv:Channel("Teleport")
+    btns:Button(
+    "Go to Yard",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(798, 98, 2550)
+end)
+
+    btns:Button(
+    "Go to Main",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(914, 99, 2375)
+end)
+
+    btns:Button(
+    "Go to Cafe",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(878, 99, 2290)
+end)
+
+    btns:Button(
+    "Go to Kitchen",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(913, 99, 2227)
+end)
+
+    btns:Button(
+    "Go to Prison Cells",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(913, 99, 2446)
+end)
+
+    btns:Button(
+    "Go to Police Spawn",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(857, 97, 2326)
+end)
+    
+    btns:Button(
+    "Go to Reception",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(695, 99, 2273)
+end)    
+    
+      btns:Button(
+    "Go to Outside Gates",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(486, 98, 2221)
+end)     
+
+      btns:Button(
+    "Go to Criminal Base",
+    function()
+local LocalPlayer = game.Players.LocalPlayer.Character.HumanoidRootPart
+LocalPlayer.CFrame = CFrame.new(-949, 94, 2063)
+end)   
     
 local serv = win:Server("Credits", "http://www.roblox.com/asset/?id=6031075938")
 serv:Channel("UI by dawid#7205")
