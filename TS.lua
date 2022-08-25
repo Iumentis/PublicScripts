@@ -24,10 +24,6 @@ event:FireServer(v1)
 game:GetService("ReplicatedStorage").Events.LoadPlayer:FireServer()
 end)
 
-
-
-
-
 local btns = serv:Channel("Autofarm Menu")
 btns:Button(
     "Auto Text",
@@ -71,7 +67,6 @@ btns:Button(
         if Coin:IsA("MeshPart") then 
             wait(0.01)
     Coin.CFrame = player.Character.HumanoidRootPart.CFrame
-
 end
 end
 end)
@@ -85,12 +80,9 @@ btns:Button(
         if Gem:IsA("MeshPart") then 
             wait(0.01)
     Gem.CFrame = player.Character.HumanoidRootPart.CFrame
-
 end
 end
 end)
-
-
 
 local btns = serv:Channel("Game Menu")
 
@@ -99,6 +91,43 @@ btns:Button(
     function()
 game:GetService("Workspace").Doors:Destroy()
 end)
+
+btns:Button(
+    "SpaceShip Portal 1 Unlock",
+    function()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-47.035194396972656, 13.086076736450195, 740.6017456054688)
+wait(1)
+game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
+    [1] = "163245",
+    [2] = workspace.Portals.Portal1,
+}))
+end)
+btns:Button(
+    "SpaceShip Portal 2 Unlock",
+    function()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-44.745914459228516, 13.024212837219238, 767.0902099609375)
+wait(1)
+game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
+    [1] = "1",
+    [2] = workspace.Portals.Portal1,
+}))
+end)
+
+btns:Button(
+    "SpaceShip Portal 3 Unlock",
+    function()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.516071319580078, 13.06653118133545, 763.8213500976562)
+wait(1)
+game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
+    [1] = "1",
+    [2] = workspace.Portals.Portal1,
+}))
+
+end)
+
     
     local btns = serv:Channel("Quest Menu")
 
@@ -200,9 +229,6 @@ wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-77.56209564208984, -112.0594253540039, -2502.16357421875)
 end)
 
-
-
-
 btns:Button(
     "Open Chest 1",
     function()
@@ -288,7 +314,177 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-77.5620
 end)
 
 
+
+
+
+local serv = win:Server("Teleport Menu", "http://www.roblox.com/asset/?id=6031075938")
+
+
+    local btns = serv:Channel("Lobby Teleports")
+
+btns:Button(
+    "Lobby Teleport",
+    function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-304.1494445800781, 8.996318817138672, 910.405029296875)
+end)
+
+btns:Button(
+    "Emoji Upgrade/Shop",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-341.7669372558594, 8.996318817138672, 950.4705200195312)
+end)
+
+btns:Button(
+    "Phone Shop",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-366.4222412109375, 9.757701873779297, 914.5050659179688)
+end)
+
+btns:Button(
+    "Sell x1",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-196.0679931640625, 8.796319007873535, 896.552001953125)
+end)
+
+btns:Button(
+    "Sell x2",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-76.46366882324219, 10.608966827392578, 1045.636474609375)
+end)
+
+btns:Button(
+    "Multiplier Store",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26.65403175354004, 8.796319961547852, 946.0916748046875)
+end)
+
+btns:Button(
+    "Eggs",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-349.04071044921875, 8.996322631835938, 847.799560546875)
+end)
+
+btns:Button(
+    "Ranks",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-342.14727783203125, 8.79631519317627, 761.4146118164062)
+    end)
     
+btns:Button(
+    "Android Out",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-253.52671813964844, 8.996320724487305, 769.6166381835938)
+end)
+
+btns:Button(
+    "Android In",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-187.55186462402344, -117.60951232910156, -2516.72314453125)
+end)
+
+btns:Button(
+    "Apple Out",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-254.25828552246094, 8.996320724487305, 1008.7926635742188)
+end)
+
+btns:Button(
+    "Apple In",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-64.91017150878906, -117.60950469970703, -2521.332275390625)
+end)
+
+btns:Button(
+    "Black Hole Transporter",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-165.57850646972656, 8.796319007873535, 1021.7407836914062)
+end)
+
+btns:Button(
+    "Classified Research Facility",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-91.06316375732422, 10.924649238586426, 747.1061401367188)
+end)
+
+btns:Button(
+    "Space Ship",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-56.57198715209961, 9.015990257263184, 786.0619506835938)
+end)
+
+btns:Button(
+    "Diamond Haven",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-326.1777038574219, -121.4520263671875, -2029.3067626953125)
+end)
+
+btns:Button(
+    "VIP",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-118.74138641357422, 100.78429412841797, -2412.98388671875)
+end)
+
+btns:Button(
+    "HAT",
+    function()
+
+end)
+
+    local btns = serv:Channel("Forest Teleports")
+
+btns:Button(
+    "Forest Teleport",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(76.5279769897461, 8.996220588684082, 898.5370483398438)
+end)
+
+btns:Button(
+    "Tablets Shop",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(139.6953582763672, 10.012934684753418, 856.8031616210938)
+    end)
+
+btns:Button(
+    "Egg",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(129.87734985351562, 9.243995666503906, 908.5676879882812)
+    end)
+
+    local btns = serv:Channel("Arctic Teleports")
+btns:Button(
+    "Arctic Teleport",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(556.4999389648438, 9.859395027160645, 937.1245727539062)
+end)
+
+btns:Button(
+    "Computer Shop",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(569.9544067382812, 9.796401023864746, 902.9820556640625)
+end)
+
+    local btns = serv:Channel("Candy Teleports")
+btns:Button(
+    "Candy Teleport",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(990.1312866210938, 9.85942554473877, 974.4880981445312)
+end)
+
+btns:Button(
+    "Gaming Shop",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1013.0210571289062, 9.285414695739746, 933.0761108398438)
+end)
+
+    local btns = serv:Channel("Hell Teleports")
+
+btns:Button(
+    "Hell Teleport",
+    function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1448.64697265625, 8.910645484924316, 976.9782104492188)
+end)
+
+
 local serv = win:Server("Credits", "http://www.roblox.com/asset/?id=6031075938")
 serv:Channel("UI by dawid#7205")
 serv:Channel("Script by 266")
