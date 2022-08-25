@@ -120,7 +120,6 @@ btns:Button(
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-44.745914459228516, 13.024212837219238, 767.0902099609375)
 wait(1)
--- This was generated from engospy RemoteSpy tool.
 game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
     [1] = "413256",
     [2] = workspace.Portals.Portal2,
@@ -134,7 +133,6 @@ btns:Button(
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.516071319580078, 13.06653118133545, 763.8213500976562)
 wait(1)
--- This was generated from engospy RemoteSpy tool.
 game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
     [1] = "615423",
     [2] = workspace.Portals.Portal3,
@@ -154,7 +152,7 @@ wait(1)
 fireclickdetector(game:GetService("Workspace").QuestTape.ClickDetector)
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-268.7343444824219, 137.77737426757812, 749.5470581054688)
-wait(1)
+wait(10)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-266.8892517089844, 9.029923439025879, 767.5140380859375)
 end)
 
