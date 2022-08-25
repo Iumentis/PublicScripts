@@ -24,6 +24,10 @@ event:FireServer(v1)
 game:GetService("ReplicatedStorage").Events.LoadPlayer:FireServer()
 end)
 
+
+
+
+
 local btns = serv:Channel("Autofarm Menu")
 btns:Button(
     "Auto Text",
@@ -67,6 +71,7 @@ btns:Button(
         if Coin:IsA("MeshPart") then 
             wait(0.01)
     Coin.CFrame = player.Character.HumanoidRootPart.CFrame
+
 end
 end
 end)
@@ -80,9 +85,12 @@ btns:Button(
         if Gem:IsA("MeshPart") then 
             wait(0.01)
     Gem.CFrame = player.Character.HumanoidRootPart.CFrame
+
 end
 end
 end)
+
+
 
 local btns = serv:Channel("Game Menu")
 
@@ -90,6 +98,9 @@ btns:Button(
     "Destroy Doors",
     function()
 game:GetService("Workspace").Doors:Destroy()
+
+
+
 end)
 
 btns:Button(
@@ -109,10 +120,12 @@ btns:Button(
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-44.745914459228516, 13.024212837219238, 767.0902099609375)
 wait(1)
+-- This was generated from engospy RemoteSpy tool.
 game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
-    [1] = "1",
-    [2] = workspace.Portals.Portal1,
+    [1] = "413256",
+    [2] = workspace.Portals.Portal2,
 }))
+
 end)
 
 btns:Button(
@@ -121,9 +134,10 @@ btns:Button(
 wait(1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16.516071319580078, 13.06653118133545, 763.8213500976562)
 wait(1)
+-- This was generated from engospy RemoteSpy tool.
 game:GetService("ReplicatedStorage").Events.VerifyCode:FireServer(table.unpack({
-    [1] = "1",
-    [2] = workspace.Portals.Portal1,
+    [1] = "615423",
+    [2] = workspace.Portals.Portal3,
 }))
 
 end)
