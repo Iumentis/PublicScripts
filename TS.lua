@@ -25,9 +25,6 @@ game:GetService("ReplicatedStorage").Events.LoadPlayer:FireServer()
 end)
 
 
-
-
-
 local btns = serv:Channel("Autofarm Menu")
 btns:Button(
     "Auto Text (Phone)",
@@ -91,7 +88,7 @@ game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Enabled = true
 end)
 
 btns:Button(
-    "Auto Collect Coins",
+    "Auto Collect Coins (Unsafe Bring)",
     function()
         local Coins = game.Workspace.Coins
         local player = game.Players.LocalPlayer
@@ -105,7 +102,20 @@ end
 end)
 
 btns:Button(
-    "Auto Collect Gems",
+    "Auto Collect Coins (Safe Teleport)",
+    function()
+        local Coins = game.Workspace.Coins
+        local player = game.Players.LocalPlayer
+    for i, Coin in pairs(Coins:GetChildren()) do
+        if Coin:IsA("MeshPart") then 
+            wait(0.1)
+player.Character.HumanoidRootPart.CFrame = Coin.CFrame
+end
+end
+end)
+
+btns:Button(
+    "Auto Collect Gems (Unsafe Bring)",
     function()
         local Gems = game.Workspace.Gems
         local player = game.Players.LocalPlayer
@@ -118,6 +128,18 @@ end
 end
 end)
 
+btns:Button(
+    "Auto Collect Gems (Safe Teleport)",
+    function()
+        local Gems = game.Workspace.Gems
+        local player = game.Players.LocalPlayer
+    for i, Gem in pairs(Gems:GetChildren()) do
+        if Gem:IsA("MeshPart") then 
+            wait(0.1)
+    player.Character.HumanoidRootPart.CFrame = Gem.CFrame
+end
+end
+end)
 
 
 local btns = serv:Channel("Game Menu")
