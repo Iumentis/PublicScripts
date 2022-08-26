@@ -24,7 +24,6 @@ event:FireServer(v1)
 game:GetService("ReplicatedStorage").Events.LoadPlayer:FireServer()
 end)
 
-
 local btns = serv:Channel("Autofarm Menu")
 btns:Button(
     "Auto Text (Phone)",
@@ -590,6 +589,433 @@ btns:Button(
     "Hell Teleport",
     function()
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1448.64697265625, 8.910645484924316, 976.9782104492188)
+end)
+
+local serv = win:Server("Purchase Menu", "http://www.roblox.com/asset/?id=6031075938")
+    local btns = serv:Channel("Smart Audio")
+
+btns:Button(
+    "Wireless Earbuds 0 Bitoneum (1)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 1,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Earbuds 0 Bitoneum (2)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 2,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Black Earbuds 0 Bitoneum (3)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 3,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Black Wireless Earbuds 0 Bitoneum (4)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 4,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Gold Wireless Earbuds 0 Bitoneum (5)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 5,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Rose Gold Wireless Earbuds 0 Bitoneum (6)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 6,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+
+btns:Button(
+    "Blue BEAT Headphones 0 Bitoneum (7)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 7,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Magenta BEAT Headphones 0 Bitoneum (8)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 8,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Rose BEAT Headphones 0 Bitoneum (9)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 9,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Silver BEAT Headphones 0 Bitoneum (10)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 10,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "White BEAT Headphones 0 Bitoneum (11)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 11,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Black BEAT Headphones 0 Bitoneum (12)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 12,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "BLUE Wireless Earbuds 0 Bitoneum (13)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 13,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "RED Wireless Earbuds 0 Bitoneum (14",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 14,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Green Wireless Earbuds 0 Bitoneum (15)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 15,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Purple Wireless Earbuds 0 Bitoneum (16)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 16,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "PRO Wireless Earbuds 0 Bitoneum (17)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 17,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Electro Bunny Headphones 0 Bitoneum (18)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 18,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Honey Comb Headphones 0 Bitoneum (19)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 19,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+
+btns:Button(
+    "Leaf Headphones 0 Bitoneum (20)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 20,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+
+btns:Button(
+    "Gold Rose Headphones 0 Bitoneum (21)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 2,
+    [2] = 21,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+    local btns = serv:Channel("Smart Speakers")
+
+btns:Button(
+    "Black Smart Pod 0 Bitoneum (1)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 1,
+    [2] = 1,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "White Smart Pod 0 Bitoneum (2)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 1,
+    [2] = 2,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Gold Smart Pod 0 Bitoneum (3)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 1,
+    [2] = 3,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Gold Smart Pod 0 Bitoneum (4)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 1,
+    [2] = 4,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Rose Gold Smart Pod 0 Bitoneum (5)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 1,
+    [2] = 5,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+   local btns = serv:Channel("Smart Watches")
+btns:Button(
+    "Fitness Tracker 0 Bitoneum (1)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 1,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Droid Smart Watch 0 Bitoneum (2)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 2,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Blue Sport Watch 0 Bitoneum (3)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 3,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Red Sport Watch 0 Bitoneum (4)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 4,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Green Sport Watch 0 Bitoneum (5)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 5,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "White Sport Watch 0 Bitoneum (6)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 6,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Black Sport Watch 0 Bitoneum (7)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 7,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Stainless Steel Watch 0 Bitoneum (8)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 8,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Gold Watch 0 Bitoneum (9)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 9,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "Ricky's Watch 0 Bitoneum (10)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 10,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "TEAM Apple SmartWatch 0 Bitoneum (11)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 11,
+    [3] = 0,
+    [4] = "Buy",
+}))
+end)
+
+btns:Button(
+    "TEAM Droid SmartWatch 0 Bitoneum (12)",
+    function()
+game:GetService("ReplicatedStorage").Events.AccessoriesServer:FireServer(table.unpack({
+    [1] = 3,
+    [2] = 12,
+    [3] = 0,
+    [4] = "Buy",
+}))
 end)
 
 
