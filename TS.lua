@@ -54,14 +54,24 @@ game:GetService("ReplicatedStorage").Events.SendTexts:FireServer("Computer")
 end
 end)
 
+
+btns:Button(
+    "Auto Text (Game)",
+    function()
+    while true do wait(0.01)
+game:GetService("ReplicatedStorage").Events.SendTexts:FireServer("Game")
+end
+end)
+
+
 btns:Button(
     "Auto Do Terminals",
     function()
 local v1 = 1
 local event = game:GetService("ReplicatedStorage").Events.HackingTermStart
 event:FireServer(v1)
-while true do wait(0.01)
 
+while true do wait(0.01)
 local v1 = game:GetService("Workspace").HackingTerminals.Hack1.HackColor.Wedge.Rewards
 local event = game:GetService("ReplicatedStorage").Events.TerminalReward
 event:FireServer(v1)
@@ -74,6 +84,21 @@ btns:Button(
         
 game:GetService("Players").LocalPlayer.PlayerGui.Gives.Enabled = false
 end)
+
+btns:Button(
+    "Hide Terminal Code Pop-Up",
+    function()
+        
+game:GetService("Players").Iumentis.PlayerGui.FakeHackingTerminal.Enabled = false
+end)
+
+btns:Button(
+    "Unhide Terminal Code Pop-Up",
+    function()
+        
+game:GetService("Players").Iumentis.PlayerGui.FakeHackingTerminal.Enabled = true
+end)
+
 
 btns:Button(
     "Hide Pop-up?",
@@ -108,7 +133,7 @@ btns:Button(
         local player = game.Players.LocalPlayer
     for i, Coin in pairs(Coins:GetChildren()) do
         if Coin:IsA("MeshPart") then 
-            wait(0.5)
+            wait(0.1)
 player.Character.HumanoidRootPart.CFrame = Coin.CFrame
 end
 end
@@ -135,7 +160,7 @@ btns:Button(
         local player = game.Players.LocalPlayer
     for i, Gem in pairs(Gems:GetChildren()) do
         if Gem:IsA("MeshPart") then 
-            wait(0.5)
+            wait(0.1)
     player.Character.HumanoidRootPart.CFrame = Gem.CFrame
 end
 end
