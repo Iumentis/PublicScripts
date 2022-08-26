@@ -30,7 +30,7 @@ end)
 
 local btns = serv:Channel("Autofarm Menu")
 btns:Button(
-    "Auto Text",
+    "Auto Text (Phone)",
     function()
         
 while true do wait(0.01)
@@ -39,6 +39,22 @@ local event = game:GetService("ReplicatedStorage").Events.SendTexts
 event:FireServer(v1)
 
     end
+end)
+
+btns:Button(
+    "Auto Text (Tablet)",
+    function()
+    while true do wait(0.01)
+game:GetService("ReplicatedStorage").Events.SendTexts:FireServer("Tablet")
+end
+end)
+
+btns:Button(
+    "Auto Text (Computer)",
+    function()
+    while true do wait(0.01)
+game:GetService("ReplicatedStorage").Events.SendTexts:FireServer("Computer")
+end
 end)
 
 btns:Button(
@@ -60,6 +76,18 @@ btns:Button(
     function()
         
 game:GetService("Players").LocalPlayer.PlayerGui.Gives.Enabled = false
+end)
+
+btns:Button(
+    "Hide Pop-up?",
+    function()
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Enabled = false
+end)
+
+btns:Button(
+    "Unhide Pop-up?",
+    function()
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Enabled = true
 end)
 
 btns:Button(
@@ -98,9 +126,30 @@ btns:Button(
     "Destroy Doors",
     function()
 game:GetService("Workspace").Doors:Destroy()
+end)
 
+btns:Button(
+    "Hide Left-Side Buttons",
+    function()
+game:GetService("Players").LocalPlayer.PlayerGui.Buttons.Enabled = false
+end)
 
+btns:Button(
+    "Unhide Left-Side Buttons",
+    function()
+game:GetService("Players").LocalPlayer.PlayerGui.Buttons.Enabled = true
+end)
 
+btns:Button(
+    "Hide Right-Side Emojis ",
+    function()
+game:GetService("Players").Iumentis.PlayerGui.EmojiIndicators.Enabled = false
+end)
+
+btns:Button(
+    "Unhide Right-Side Emojis ",
+    function()
+game:GetService("Players").Iumentis.PlayerGui.EmojiIndicators.Enabled = true
 end)
 
 btns:Button(
