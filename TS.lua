@@ -108,7 +108,7 @@ btns:Button(
         local player = game.Players.LocalPlayer
     for i, Coin in pairs(Coins:GetChildren()) do
         if Coin:IsA("MeshPart") then 
-            wait(0.1)
+            wait(0.5)
 player.Character.HumanoidRootPart.CFrame = Coin.CFrame
 end
 end
@@ -135,7 +135,7 @@ btns:Button(
         local player = game.Players.LocalPlayer
     for i, Gem in pairs(Gems:GetChildren()) do
         if Gem:IsA("MeshPart") then 
-            wait(0.1)
+            wait(0.5)
     player.Character.HumanoidRootPart.CFrame = Gem.CFrame
 end
 end
