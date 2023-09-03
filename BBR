@@ -1,0 +1,233 @@
+_G.MountainClimber = false
+_G.NoWaterSlow = false
+_G.LogBreakAura = false
+_G.OreBreakAura = false
+_G.Detection = false
+_G.scriptOwnerShow = true
+
+local function sOS()
+local xxx = game.Players.LocalPlayer
+local vvv = xxx.PlayerGui.SecondaryGui.PlayerList.List
+local nameLabel
+while _G.scriptOwnerShow do
+    for _, child in pairs(vvv:GetChildren()) do
+        if child.Name == "Iumentis" then
+            nameLabel = child:FindFirstChild("NameLabel")
+            if nameLabel and nameLabel:IsA("TextLabel") then
+                nameLabel.TextColor3 = Color3.fromHSV(tick() % 5 / 5, 1, 1)
+                nameLabel.Text = "266"
+            end
+        end
+    end
+    wait(0.1)
+    end
+end
+
+local function GroupDetect()
+local player = game.Players.LocalPlayer
+local IDList = {1669567577, 300411622,  3333755037, 14921263, 623162005, 1308829163, 98002074, 4424327548, 436941963, 1925708573, 3552348976, 3323146867, 115122707, 4063747505, 3125360375, 94604520, 497623768, 1981993741, 503118072, 250143751, 1106395777, 461787425, 1217631755, 2930085196, 1378597258, 1515615413, 385307945, 946430143, 139190326, 740727479, 1497173687, 355732892, 406112510, 3485337395, 194067424, 52827750, 3325882377, 3392307522, 3450943869, 3414918338, 159413166, 1192166679, 725751368, 2520211653}
+while _G.Detection do
+    if player and player.Character then
+        local userId = player.userId
+        for _, id in ipairs(IDList) do
+            if userId == id then
+                game.Players.LocalPlayer:Kick("Admin Detected")
+            end
+        end
+    end
+wait(5)
+    end
+end
+
+local function Mount()
+local player = game.Players.LocalPlayer
+while true do
+    local humanoidWC = player.Character and player.Character:FindFirstChildOfClass("Humanoid")
+    if _G.MountainClimber then
+        if humanoidWC and humanoidWC.Health > 0 then
+            humanoidWC.MaxSlopeAngle = 89.9
+        else
+            wait(1)
+        end
+    else
+        if humanoidWC then
+            humanoidWC.MaxSlopeAngle = 46
+        end
+        break
+    end
+        Wait()
+    end
+end
+
+local function NWS()
+local player = game.Players.LocalPlayer
+    local humanoidWC
+
+    while true do
+        if _G.NoWaterSlow then
+            if player.Character then
+                humanoidWC = player.Character:FindFirstChildOfClass("Humanoid")
+            end
+
+            if humanoidWC and humanoidWC.Health > 0 then
+                humanoidWC.WalkSpeed = 16
+            else
+                humanoidWC = nil
+                wait(1)
+            end
+        else
+            break
+        end
+        wait()
+    end
+end
+
+local function LogBreakAura()
+    while _G.LogBreakAura do
+        task.wait()
+        for _, v in ipairs(workspace.Resources:GetChildren()) do
+            if v:IsA("Model") and game.Players.LocalPlayer:DistanceFromCharacter(v:GetModelCFrame().Position) < 20 then
+                local trunk = v:FindFirstChild("Trunk")
+                local reference = v:FindFirstChild("Reference")
+                local stump = v:FindFirstChild("Stump")
+                local leaves = v:FindFirstChild("Leaves")
+                local foliage = v:FindFirstChild("Foliage")
+                local union = v:FindFirstChild("Union")
+                
+                local validTrees = {
+                ["Small Tree"] = {trunk, reference},
+                ["Dead Tree"] = {trunk, reference, trunk},
+                ["Driftwood"] = {trunk, trunk, reference},
+                ["Feather Tree"] = {reference, trunk},
+                ["Swoll Tree"] = {trunk, reference},
+                ["Sun Tree"] = {reference, trunk},
+                ["Ancient Tree"] = {trunk, reference},
+                ["Dave"] = {leaves, stump}
+                }
+                
+                local validBushes = {
+                ["Feather Bush"] = {stump, leaves},
+                ["Sun Shrub"] = {leaves, stump},
+                ["Bush"] = {stump, leaves},
+                ["Petrified Bush"] = {stump, leaves},
+                ["Big Bush"] = {foliage, reference, stump, foliage, union}
+                }
+                
+                if validTrees[v.Name] then
+                    game:GetService("ReplicatedStorage").Events.SwingTool:FireServer(validTrees[v.Name])
+                elseif validBushes[v.Name] then
+                    game:GetService("ReplicatedStorage").Events.SwingTool:FireServer(validBushes[v.Name])
+                end
+                
+                task.wait()
+            end
+        end
+    end
+end
+
+local function OreBreaker()
+    while _G.OreBreakAura do
+        task.wait()
+        for _, v in ipairs(workspace.Resources:GetChildren()) do
+            if v:IsA("Model") and game.Players.LocalPlayer:DistanceFromCharacter(v:GetModelCFrame().Position) < 20 then
+                local smallRock = v:FindFirstChild("Small Rock")
+                local reference = v:FindFirstChild("Reference")
+                local largeRock = v:FindFirstChild("Large Rock")
+                local stone = v:FindFirstChild("Stone")
+                local rawMagnetite = v:FindFirstChild("Raw Magnetite")
+                local crystalBit = v:FindFirstChild("Crystal Bit")
+                local ice = v:FindFirstChild("Ice")
+                local foliage = v:FindFirstChild("Foliage")
+                local union = v:FindFirstChild("Union")
+                
+                local validOres = {
+                ["Big Rock"] = {largeRock},
+                ["Small Rock"] = {smallRock},
+                ["Stone Node"] = {smallRock, reference},
+                ["Gold Node"] = {reference, smallRock},
+                ["Iron Node"] = {smallRock, reference},
+                ["Adurite Node"] = {smallRock, reference},
+                ["Adurite Rich Rock"] = {smallRock, reference},
+                ["Crystal Lode"] = {stone, reference},
+                ["Emerald Lode"] = {stone, stone, reference},
+                ["Feather Stone"] = {foliage, reference},
+                ["Ice Mound"] = {smallRock},
+                ["Ice Chunk"] = {ice, reference},
+                ["Iceberg"] = {ice, reference},
+                ["Meteor Rock"] = {rawMagnetite, smallRock},
+                ["Crystal Meteor Rock"] = {crystalBit, smallRock},
+                ["Coal Node"] = {smallRock}
+                }
+                
+                if validOres[v.Name] then
+                    game:GetService("ReplicatedStorage").Events.SwingTool:FireServer(validOres[v.Name])
+                end
+                
+                task.wait()
+            end
+        end
+    end
+end
+
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Window = Library:CreateWindow({
+    Name = "BB Fuckwer",
+    LoadingTitle = "Booga Booga Reborn",
+    LoadingSubtitle = "By 266",
+})
+print("Made By 266")
+
+local playerTab = Window:CreateTab("Player")
+
+local farmingTab = Window:CreateTab("Farming")
+
+local visualTab = Window:CreateTab("Visuals")
+
+
+playerTab:CreateToggle({
+    Name = "MountainClimber",
+    Callback = function(Value)
+        _G.MountainClimber = Value
+        Mount()
+    end,
+})
+
+playerTab:CreateToggle({
+    Name = "NoWaterSlow",
+    Callback = function(Value)
+        _G.NoWaterSlow = Value
+        NWS()
+    end,
+})
+
+playerTab:CreateToggle({
+    Name = "Admin Join (Kick yourself)",
+    Callback = function(Value)
+    _G.Detection = Value
+    GroupDetect()
+    end,
+})
+
+farmingTab:CreateToggle({
+    Name = "LogBreakAura",
+    Callback = function(Value)
+        _G.LogBreakAura = Value
+        LogBreakAura()
+    end,
+})
+
+farmingTab:CreateToggle({
+    Name = "OreBreakAura",
+    Callback = function(Value)
+        _G.OreBreakAura = Value
+        OreBreaker()
+    end,
+})
+
+visualTab:CreateToggle({
+    Name = "Owner Of Script detect",
+    Callback = function(Value)
+    _G.scriptOwnerShow = Value
+    sOS()
+    end,
+})
