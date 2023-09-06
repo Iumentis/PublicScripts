@@ -3,7 +3,15 @@ _G.NoWaterSlow = false
 _G.LogBreakAura = false
 _G.OreBreakAura = false
 _G.Detection = false
-_G.scriptOwnerShow = true
+_G.scriptOwnerShow = false
+
+--esp
+_G.GoldEsp = false
+_G.AduriteEsp = false
+_G.CrystalLodeEsp = false
+_G.IronNodeEsp = false
+_G.MeteorRockEsp = false
+_G.CrystalMeteorRockEsp = false
 
 local function sOS()
 local xxx = game.Players.LocalPlayer
@@ -177,6 +185,415 @@ local function tpMain()
 game:GetService("TeleportService"):Teleport(11729688377)
 end
 
+
+local function goldEsp()
+local billboardGui = Instance.new("BillboardGui")
+billboardGui.Name = "Gold BG"
+billboardGui.Active = false
+billboardGui.AlwaysOnTop = true
+billboardGui.Brightness = 1
+billboardGui.DistanceLowerLimit = 0
+billboardGui.DistanceStep = 0
+billboardGui.DistanceUpperLimit = -1
+billboardGui.Enabled = true
+billboardGui.ExtentsOffset = Vector3.new(0, 0, 0)
+billboardGui.LightInfluence = 0
+billboardGui.MaxDistance = inf
+billboardGui.ResetOnSpawn = false
+billboardGui.Size = UDim2.new(0, 10, 0, 10)
+billboardGui.SizeOffset = Vector2.new(0, 0)
+billboardGui.AutoLocalize = true
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Active = false
+textLabel.AnchorPoint = Vector2.new(0, 0)
+textLabel.AutomaticSize = Enum.AutomaticSize.None
+textLabel.BackgroundTransparency = 1
+textLabel.BorderSizePixel = 0
+textLabel.LayoutOrder = 0
+textLabel.Name = "TextLabel"
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Rotation = 0
+textLabel.Size = UDim2.new(0.5, 0.5, 0.5, 0.5)
+textLabel.Visible = true
+textLabel.ZIndex = 1
+textLabel.LineHeight = 1
+textLabel.MaxVisibleGraphemes = -1
+textLabel.RichText = false
+textLabel.Text = "Gold Node"
+textLabel.TextColor3 = Color3.new(1, 1, 0)
+textLabel.TextSize = 15
+textLabel.TextScaled = false
+textLabel.AutoLocalize = false
+
+local function createBillboardAndLabel(model)
+    local clonedBillboardGui = billboardGui:Clone()
+    clonedBillboardGui.Parent = model
+    
+    local clonedTextLabel = textLabel:Clone()
+    clonedTextLabel.Parent = clonedBillboardGui
+end
+
+while _G.GoldEsp do
+    wait(1)
+
+    if not _G.GoldEsp then
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            local goldBgs = model:FindFirstChild("Gold BG")
+            if goldBgs then
+                goldBgs:Destroy()
+            end
+        end
+    else
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            if model.Name == "Gold Node" and not model:FindFirstChild("Gold BG") then
+                createBillboardAndLabel(model)
+            end
+        end
+    end
+end
+end
+
+local function aduriteEsp()
+local billboardGui = Instance.new("BillboardGui")
+billboardGui.Name = "Adurite BG"
+billboardGui.Active = false
+billboardGui.AlwaysOnTop = true
+billboardGui.Brightness = 1
+billboardGui.DistanceLowerLimit = 0
+billboardGui.DistanceStep = 0
+billboardGui.DistanceUpperLimit = -1
+billboardGui.Enabled = true
+billboardGui.ExtentsOffset = Vector3.new(0, 0, 0)
+billboardGui.LightInfluence = 0
+billboardGui.MaxDistance = inf
+billboardGui.ResetOnSpawn = false
+billboardGui.Size = UDim2.new(0, 10, 0, 10)
+billboardGui.SizeOffset = Vector2.new(0, 0)
+billboardGui.AutoLocalize = true
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Active = false
+textLabel.AnchorPoint = Vector2.new(0, 0)
+textLabel.AutomaticSize = Enum.AutomaticSize.None
+textLabel.BackgroundTransparency = 1
+textLabel.BorderSizePixel = 0
+textLabel.LayoutOrder = 0
+textLabel.Name = "TextLabel"
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Rotation = 0
+textLabel.Size = UDim2.new(0.5, 0.5, 0.5, 0.5)
+textLabel.Visible = true
+textLabel.ZIndex = 1
+textLabel.LineHeight = 1
+textLabel.MaxVisibleGraphemes = -1
+textLabel.RichText = false
+textLabel.Text = "Adurite Node"
+textLabel.TextColor3 = Color3.new(103/255, 0, 0)
+textLabel.TextSize = 15
+textLabel.TextScaled = false
+textLabel.AutoLocalize = false
+
+local function createBillboardAndLabel(model)
+    local clonedBillboardGui = billboardGui:Clone()
+    clonedBillboardGui.Parent = model
+    
+    local clonedTextLabel = textLabel:Clone()
+    clonedTextLabel.Parent = clonedBillboardGui
+end
+
+while _G.AduriteEsp do
+    wait(1)
+
+    if not _G.AduriteEsp then
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            local aduriteBgs = model:FindFirstChild("Adurite BG")
+            if aduriteBgs then
+                aduriteBgs:Destroy()
+            end
+        end
+    else
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            if (model.Name == "Adurite Node" or model.Name == "Adurite Rich Rock") and not model:FindFirstChild("Adurite BG") then
+                createBillboardAndLabel(model)
+            end
+        end
+    end
+end
+end
+
+local function crystallodeEsp()
+local billboardGui = Instance.new("BillboardGui")
+billboardGui.Name = "Crystal Lode BG"
+billboardGui.Active = false
+billboardGui.AlwaysOnTop = true
+billboardGui.Brightness = 1
+billboardGui.DistanceLowerLimit = 0
+billboardGui.DistanceStep = 0
+billboardGui.DistanceUpperLimit = -1
+billboardGui.Enabled = true
+billboardGui.ExtentsOffset = Vector3.new(0, 0, 0)
+billboardGui.LightInfluence = 0
+billboardGui.MaxDistance = inf
+billboardGui.ResetOnSpawn = false
+billboardGui.Size = UDim2.new(0, 10, 0, 10)
+billboardGui.SizeOffset = Vector2.new(0, 0)
+billboardGui.AutoLocalize = true
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Active = false
+textLabel.AnchorPoint = Vector2.new(0, 0)
+textLabel.AutomaticSize = Enum.AutomaticSize.None
+textLabel.BackgroundTransparency = 1
+textLabel.BorderSizePixel = 0
+textLabel.LayoutOrder = 0
+textLabel.Name = "TextLabel"
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Rotation = 0
+textLabel.Size = UDim2.new(0.5, 0.5, 0.5, 0.5)
+textLabel.Visible = true
+textLabel.ZIndex = 1
+textLabel.LineHeight = 1
+textLabel.MaxVisibleGraphemes = -1
+textLabel.RichText = false
+textLabel.Text = "Crystal Lode"
+textLabel.TextColor3 = Color3.new(176, 241, 244)
+textLabel.TextSize = 15
+textLabel.TextScaled = false
+textLabel.AutoLocalize = false
+
+local function createBillboardAndLabel(model)
+    local clonedBillboardGui = billboardGui:Clone()
+    clonedBillboardGui.Parent = model
+    
+    local clonedTextLabel = textLabel:Clone()
+    clonedTextLabel.Parent = clonedBillboardGui
+end
+
+while _G.CrystalLodeEsp do
+    wait(1)
+
+    if not _G.CrystalLodeEsp then
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            local CrystalLodeBgs = model:FindFirstChild("Crystal Lode BG")
+            if CrystalLodeBgs then
+                CrystalLodeBgs:Destroy()
+            end
+        end
+    else
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            if (model.Name == "Crystal Lode") and not model:FindFirstChild("Crystal Lode BG") then
+                createBillboardAndLabel(model)
+            end
+        end
+    end
+end
+end
+
+local function ironnodeEsp()
+local billboardGui = Instance.new("BillboardGui")
+billboardGui.Name = "Iron Node BG"
+billboardGui.Active = false
+billboardGui.AlwaysOnTop = true
+billboardGui.Brightness = 1
+billboardGui.DistanceLowerLimit = 0
+billboardGui.DistanceStep = 0
+billboardGui.DistanceUpperLimit = -1
+billboardGui.Enabled = true
+billboardGui.ExtentsOffset = Vector3.new(0, 0, 0)
+billboardGui.LightInfluence = 0
+billboardGui.MaxDistance = inf
+billboardGui.ResetOnSpawn = false
+billboardGui.Size = UDim2.new(0, 10, 0, 10)
+billboardGui.SizeOffset = Vector2.new(0, 0)
+billboardGui.AutoLocalize = true
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Active = false
+textLabel.AnchorPoint = Vector2.new(0, 0)
+textLabel.AutomaticSize = Enum.AutomaticSize.None
+textLabel.BackgroundTransparency = 1
+textLabel.BorderSizePixel = 0
+textLabel.LayoutOrder = 0
+textLabel.Name = "TextLabel"
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Rotation = 0
+textLabel.Size = UDim2.new(0.5, 0.5, 0.5, 0.5)
+textLabel.Visible = true
+textLabel.ZIndex = 1
+textLabel.LineHeight = 1
+textLabel.MaxVisibleGraphemes = -1
+textLabel.RichText = false
+textLabel.Text = "Iron Node"
+textLabel.TextColor3 = Color3.new(160, 95, 53)
+textLabel.TextSize = 15
+textLabel.TextScaled = false
+textLabel.AutoLocalize = false
+
+local function createBillboardAndLabel(model)
+    local clonedBillboardGui = billboardGui:Clone()
+    clonedBillboardGui.Parent = model
+    
+    local clonedTextLabel = textLabel:Clone()
+    clonedTextLabel.Parent = clonedBillboardGui
+end
+
+while _G.IronNodeEsp do
+    wait(1)
+
+    if not _G.IronNodeEsp then
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            local IronNodeBgs = model:FindFirstChild("Iron Node BG")
+            if IronNodeBgs then
+                IronNodeBgs:Destroy()
+            end
+        end
+    else
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            if (model.Name == "Iron Node") and not model:FindFirstChild("Iron Node BG") then
+                createBillboardAndLabel(model)
+            end
+        end
+    end
+end
+end
+
+local function meteorrockEsp()
+local billboardGui = Instance.new("BillboardGui")
+billboardGui.Name = "Meteor Rock BG"
+billboardGui.Active = false
+billboardGui.AlwaysOnTop = true
+billboardGui.Brightness = 1
+billboardGui.DistanceLowerLimit = 0
+billboardGui.DistanceStep = 0
+billboardGui.DistanceUpperLimit = -1
+billboardGui.Enabled = true
+billboardGui.ExtentsOffset = Vector3.new(0, 0, 0)
+billboardGui.LightInfluence = 0
+billboardGui.MaxDistance = inf
+billboardGui.ResetOnSpawn = false
+billboardGui.Size = UDim2.new(0, 10, 0, 10)
+billboardGui.SizeOffset = Vector2.new(0, 0)
+billboardGui.AutoLocalize = true
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Active = false
+textLabel.AnchorPoint = Vector2.new(0, 0)
+textLabel.AutomaticSize = Enum.AutomaticSize.None
+textLabel.BackgroundTransparency = 1
+textLabel.BorderSizePixel = 0
+textLabel.LayoutOrder = 0
+textLabel.Name = "TextLabel"
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Rotation = 0
+textLabel.Size = UDim2.new(0.5, 0.5, 0.5, 0.5)
+textLabel.Visible = true
+textLabel.ZIndex = 1
+textLabel.LineHeight = 1
+textLabel.MaxVisibleGraphemes = -1
+textLabel.RichText = false
+textLabel.Text = "Raw Magnetite"
+textLabel.TextColor3 = Color3.new(98, 37, 209)
+textLabel.TextSize = 15
+textLabel.TextScaled = false
+textLabel.AutoLocalize = false
+
+local function createBillboardAndLabel(model)
+    local clonedBillboardGui = billboardGui:Clone()
+    clonedBillboardGui.Parent = model
+    
+    local clonedTextLabel = textLabel:Clone()
+    clonedTextLabel.Parent = clonedBillboardGui
+end
+
+while _G.MeteorRockEsp do
+    wait(1)
+
+    if not _G.MeteorRockEsp then
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            local MeteorRockBgs = model:FindFirstChild("Meteor Rock BG")
+            if MeteorRockBgs then
+                MeteorRockBgs:Destroy()
+            end
+        end
+    else
+        for _, model in pairs(game.Workspace.Resources:GetChildren()) do
+            if (model.Name == "Meteor Rock") and not model:FindFirstChild("Meteor Rock BG") then
+                createBillboardAndLabel(model)
+            end
+        end
+    end
+end
+end
+
+local function crystalmeteorrockEsp()
+local billboardGui = Instance.new("BillboardGui")
+billboardGui.Name = "Crystal Meteor Rock BG"
+billboardGui.Active = false
+billboardGui.AlwaysOnTop = true
+billboardGui.Brightness = 1
+billboardGui.DistanceLowerLimit = 0
+billboardGui.DistanceStep = 0
+billboardGui.DistanceUpperLimit = -1
+billboardGui.Enabled = true
+billboardGui.ExtentsOffset = Vector3.new(0, 0, 0)
+billboardGui.LightInfluence = 0
+billboardGui.MaxDistance = inf
+billboardGui.ResetOnSpawn = false
+billboardGui.Size = UDim2.new(0, 10, 0, 10)
+billboardGui.SizeOffset = Vector2.new(0, 0)
+billboardGui.AutoLocalize = true
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Active = false
+textLabel.AnchorPoint = Vector2.new(0, 0)
+textLabel.AutomaticSize = Enum.AutomaticSize.None
+textLabel.BackgroundTransparency = 1
+textLabel.BorderSizePixel = 0
+textLabel.LayoutOrder = 0
+textLabel.Name = "TextLabel"
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.Rotation = 0
+textLabel.Size = UDim2.new(0.5, 0.5, 0.5, 0.5)
+textLabel.Visible = true
+textLabel.ZIndex = 1
+textLabel.LineHeight = 1
+textLabel.MaxVisibleGraphemes = -1
+textLabel.RichText = false
+textLabel.Text = "Crystal"
+textLabel.TextColor3 = Color3.new(170, 255, 255)
+textLabel.TextSize = 15
+textLabel.TextScaled = false
+textLabel.AutoLocalize = false
+
+local function createBillboardAndLabel(model)
+    local clonedBillboardGui = billboardGui:Clone()
+    clonedBillboardGui.Parent = model
+    
+    local clonedTextLabel = textLabel:Clone()
+    clonedTextLabel.Parent = clonedBillboardGui
+end
+
+while _G.CrystalMeteorRockEsp do
+    wait(1)
+
+    if not _G.CrystalMeteorRockEsp then
+        for _, model in pairs(game.Workspace:GetChildren()) do
+            local CrystalMeteorRockBgs = model:FindFirstChild("Crystal Meteor Rock BG")
+            if CrystalMeteorRockBgs then
+                CrystalMeteorRockBgs:Destroy()
+            end
+        end
+    else
+        for _, model in pairs(game.Workspace:GetChildren()) do
+            if (model.Name == "Crystal Meteor Rock") and not model:FindFirstChild("Crystal Meteor Rock BG") then
+                createBillboardAndLabel(model)
+            end
+        end
+    end
+end
+end
+
 local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/SiriusSoftwareLtd/Rayfield/main/source.lua'))()
 local Window = Library:CreateWindow({
     Name = "BB Fuckwer",
@@ -192,6 +609,8 @@ local farmingTab = Window:CreateTab("Farming")
 local visualTab = Window:CreateTab("Visuals")
 
 local worldTab = Window:CreateTab("World")
+
+local espTab = Window:CreateTab("Esp")
 
 
 playerTab:CreateToggle({
@@ -420,4 +839,52 @@ if setspeed then
    WalkSpeedSpoof:SetWalkSpeed(setspeed)
 end
 end,
+})
+
+espTab:CreateToggle({
+    Name = "Adurite & Adurite Rich Esp",
+    Callback = function(Value)
+    _G.AduriteEsp = Value
+    aduriteEsp()
+    end,
+})
+
+espTab:CreateToggle({
+    Name = "Crystal Lode Esp",
+    Callback = function(Value)
+    _G.CrystalLodeEsp = Value
+    crystallodeEsp()
+    end,
+})
+
+espTab:CreateToggle({
+    Name = "Crystal Meteor",
+    Callback = function(Value)
+    _G.CrystalMeteorRockEsp = Value
+    crystalmeteorrockEsp()
+    end,
+})
+
+espTab:CreateToggle({
+    Name = "Gold Esp",
+    Callback = function(Value)
+    _G.GoldEsp = Value
+    goldEsp()
+    end,
+})
+
+espTab:CreateToggle({
+    Name = "Iron Esp",
+    Callback = function(Value)
+    _G.IronNodeEsp = Value
+    ironnodeEsp()
+    end,
+})
+
+espTab:CreateToggle({
+    Name = "Meteor Rock (Raw Magnetite)",
+    Callback = function(Value)
+    _G.MeteorRockEsp = Value
+    meteorrockEsp()
+    end,
 })
