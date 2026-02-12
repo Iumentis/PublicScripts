@@ -3,7 +3,8 @@ For BoogaBooga run this:
 ```lua
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Iumentis/PublicScripts/refs/heads/main/BoogaBooga'))()
 ```
-
+<details>
+ <summary> Keywords (Ignore) </summary>
 Feature List:
 Auto-Farm:
 Universal Reach (may not be concise)
@@ -79,3 +80,4 @@ While I pride myself with my code; the ESP/Waypoints may cause fps drops (sorry)
  
 
 uhmm and then script (I use Volt so yuh; not sure if many xecutors can support the script since I obfuscated it with Luraph):
+</details>
