@@ -79,5 +79,7 @@ While I pride myself with my code; the ESP/Waypoints may cause fps drops (sorry)
 
  
 
-uhmm and then script (I use Volt so yuh; not sure if many xecutors can support the script since I obfuscated it with Luraph):
+uhmm and then script (I use Volt so yuh; not sure if many xecutors can support the script since I obfuscated it with Luraph)
+
+Booga Booga Reborn Script, Booga Booga Script, script, Booga Booga, github, roblox, ScriptBlox Booga Booga, wearedevs.net Booga Booga, booga booga, exploit, free script, Booga Booga Script 2026
 </details>
