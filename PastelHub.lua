@@ -41,3 +41,8 @@ local PastelTheme = {
     ErrorColor = Color3.fromRGB(234, 158, 178),
     ErrorStrokeColor = Color3.fromRGB(218, 138, 160),
 }
+
+return {
+    Rayfield = Rayfield,
+    Theme = PastelTheme,
+}
